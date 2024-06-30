@@ -59,7 +59,9 @@ require("lazy").setup({
 local pywal16 = require('pywal16')
 pywal16.setup()
 
-
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
 vim.cmd.colorscheme 'pywal16'
 require("telescope").setup()
 require('leap').create_default_mappings()
