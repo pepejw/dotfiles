@@ -1,14 +1,7 @@
-export ZOXIDE_CMD_OVERRIDE=cd
-export FZF_BASE=/usr/bin
-export FZF_DEFAULT_COMMAND='fzf'
-source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 alias off="shutdown now"
 alias ls="eza -a"
 alias CD="cd"
+alias changepaper="~/codeprojects/changepaper/changepaper.py"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
