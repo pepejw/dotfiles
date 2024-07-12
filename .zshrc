@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -95,7 +95,12 @@ alias ls="eza -a"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+if [[ -n $DISPLAY ]];
+then
+  export EDITOR="zed"
+else
+  export EDITOR="nvim"
+fi
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
